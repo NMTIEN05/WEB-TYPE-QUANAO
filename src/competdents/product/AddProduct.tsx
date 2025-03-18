@@ -37,13 +37,16 @@ const AddProduct = () => {
   };
 
   return (
+    
     <div className="container mt-1">
-      <h3>Thêm Sản Phẩm</h3>
+     
+     
       <form
-        className="row g-3 needs-validation"
+        className="row g-3 needs-validation mt-0"
         noValidate
         onSubmit={handleSubmit(onSubmit)}
       >
+         <h3 > Them Sản Phẩm</h3>
         {/* Tên Sản Phẩm */}
         <div className="col-md-6">
           <label htmlFor="name" className="form-label">

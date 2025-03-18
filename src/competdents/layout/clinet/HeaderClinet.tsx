@@ -1,5 +1,6 @@
 import React from 'react'
 import "./style.css"
+import { Link } from 'react-router-dom'
 
 
 const HeaderClinet = () => {
@@ -11,7 +12,7 @@ const HeaderClinet = () => {
         <div className="top-button">
           <div className="top-buton-left">
             <img
-              src="./img/Screenshot_2025-03-14_012343-removebg-preview.png"
+              src=""
               width="100px"
               height="50"
               alt="Logo"
@@ -22,8 +23,8 @@ const HeaderClinet = () => {
               <div className="account">
                 <i className="fas fa-user"></i> Tài khoản
                 <div className="account-dropdown">
-                  <a href="#">Đăng nhập</a>
-                  <a href="#">Đăng ký</a>
+                  <Link to={`login`}>Đăng Nhập</Link>
+                  <Link to={`register`}>Đăng Ký</Link>
                 </div>
               </div>
               <div className="cart">

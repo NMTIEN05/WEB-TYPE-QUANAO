@@ -37,7 +37,7 @@ const EditCategory = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form-container">
-      <h3>Edit Category</h3>
+      <h3 className='mt-5' >Edit Category</h3>
 
       <div className="form-group">
         <label htmlFor="namecategory">Category Name</label>

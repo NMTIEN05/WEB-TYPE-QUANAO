@@ -18,7 +18,7 @@ const AddCategory = () => {
     try {
        await axios.post(`http://localhost:3000/categorys`, data);
       alert('Bạn Đã Danh Mục Phim Thành Công');
-      navigate('/category/List');
+      navigate('/dashboard/category/list');
     } catch (error) {
       alert('Có lỗi xảy ra. Vui lòng thử lại!');
       console.error('Error posting category:', error);
@@ -27,7 +27,7 @@ const AddCategory = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-wrap gap-6 mt-8 w-full h-screen max-w-none mx-auto p-10 bg-gradient-to-r from-teal-600 to-teal-500 rounded-none shadow-xl">
-      <h3 >Thêm Danh Muc</h3>
+      <h3 className='mt-5' >Thêm Danh Muc</h3>
       <br />
 
       {/* Các trường nhập liệu */}

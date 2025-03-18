@@ -37,7 +37,7 @@ const ListProduct = () => {
   return (
     <div>
 
-  <h3>Danh Sách Sản Phẩm</h3>
+  <h3 className='mt-5'>Danh Sách Sản Phẩm</h3>
   <button type="button" className="btn btn-outline-primary mb-3"><Link to="/dashboard/add" className="custom-link">Thêm Sản Phẩm</Link></button>
   
 
@@ -69,8 +69,8 @@ const ListProduct = () => {
               <td>{product.describe}</td>
               <td>{product.categorys}</td>
               <td>
-                <button className="btn btn-delete" onClick={() => handleDelete(product.id)}>🗑 Xóa</button>
-                <Link to={`/dashboard/edit/${product.id}`} className="btn btn-edit">✏ Sửa</Link>
+                <button className="btn btn-delete" onClick={() => handleDelete(product.id)}>🗑</button>
+                <Link to={`/dashboard/edit/${product.id}`} className="btn btn-edit">✏</Link>
               </td>
             </tr>
           ))}

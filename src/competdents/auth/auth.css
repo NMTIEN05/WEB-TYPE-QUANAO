@@ -1,0 +1,145 @@
+
+
+body {
+    /* display: grid; */
+    /* justify-content: center; */
+    align-content: center;
+}
+
+::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.wrapper {
+    margin-left: 350px;
+    position: relative;
+    width: 850px;
+    height: 78vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 50px 0 #00a6bc;
+}
+
+.form {
+    display: flex;
+    background: #081b29;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 35px;
+}
+
+.inp {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 260px;
+    margin-top: 40px;
+    padding-right: 10px;
+    font-size: 17px;
+    color: #0ef;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    width: 288px;
+    margin-top: 25px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #0ef, #c800ff);
+}
+
+.footer {
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+.link {
+    color: #0ef;
+    text-decoration: none;
+}
+
+/* Bao ngoài phần banner với nền màu đen */
+.banner-auth-wrapper {
+    position: relative; /* Thay vì absolute, để nó không bị lệch */
+    top: 0;
+    right: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 450px;
+    height: 590px;
+    background-color: #081b29; /* Màu đen cho phần thừa */
+}
+
+/* Phần banner với nền gradient */
+.banner-auth {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 390px;
+    background: linear-gradient(to right, #0ef, #c800ff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+    padding-right: 70px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.wel_text {
+    font-size: 40px;
+    margin-top: -50px;
+    line-height: 50px;
+}
+
+.para {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+.mxh {
+    display: flex;
+}
+
+.mxh .icon {
+    display: flex; /* Thêm display: flex để sử dụng flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 50%; /* Đổi border-radius thành 50% để tạo hình tròn */
+    background-color: #0e8be4;
+    width: 30px;
+    height: 30px;
+}
+
+.mxh .icon i {
+    font-size: 16px; /* Cung cấp kích thước cho icon nếu cần */
+}
+
+.inp-pass i {
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+

@@ -9,10 +9,15 @@ import AddCategory from './competdents/category/AddCategory';
 import ListCategory from './competdents/category/ListCategory';
 import EditCategory from './competdents/category/EditCategory';
 import Clinet from './competdents/layout/clinet';
+import Register from './competdents/auth/Register';
+import Login from './competdents/auth/Login';
+
 
 
 function App() {
 const router = useRoutes([
+    {path:"/register",element:<Register/>},
+    {path:"/login",element:<Login/>},
 {path:"dashboard",element:<AdminLayout/>,children:[
     {path:"/dashboard/add",element:<AddProduct/>},
     {path:"/dashboard/list",element:<ListProduct/>},
@@ -22,6 +27,8 @@ const router = useRoutes([
     {path:"/dashboard/edit/category/:id",element:<EditCategory/>},
 ]},
 {path:"/",element:<Clinet/>,children:[
+    
+
    
 ]},
 

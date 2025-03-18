@@ -55,14 +55,15 @@ const EditProduct = () => {
 
   return (
     <div className="container mt-1">
-      <h3>Thêm Sản Phẩm</h3>
+      
       <form
         className="row g-3 needs-validation"
         noValidate
         onSubmit={handleSubmit(onSubmit)}
       >
+        <h3 className='mt-5'>Edit Sản Phẩm</h3>
         {/* Tên Sản Phẩm */}
-        <div className="col-md-6">
+        <div className="col-md-6 ">
           <label htmlFor="name" className="form-label">
             Tên Sản Phẩm
           </label>

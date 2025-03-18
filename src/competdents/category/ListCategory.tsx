@@ -41,7 +41,7 @@ const ListCategory = () => {
   return (
   <div>
 
-    <h3>Danh Sách Danh Mục</h3>
+    <h3 className='mt-5'>Danh Sách Danh Mục</h3>
     <button type="button" className="btn btn-outline-primary mb-3"><Link to="/dashboard/category/add" className="custom-link">Thêm Danh Mục</Link></button>
       <table className="table caption-top">
       <thead>
@@ -67,8 +67,8 @@ const ListCategory = () => {
                   <td>{category.describe}</td>
 
                   <td>
-                    <button className="btn btn-delete" onClick={() => handleDelete(category.id)}>🗑 Xóa</button>
-                    <Link to={`/dashboard/edit/category/${category.id}`} className="btn btn-edit">✏ Sửa</Link>
+                    <button className="btn btn-delete" onClick={() => handleDelete(category.id)}>🗑 </button>
+                    <Link to={`/dashboard/edit/category/${category.id}`} className="btn btn-edit">✏ </Link>
                   </td>
                 </tr>
               ))}
