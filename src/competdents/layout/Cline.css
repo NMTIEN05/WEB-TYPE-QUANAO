@@ -1,0 +1,11 @@
+.body1 {
+    min-height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+    
+    width: 100%;
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+  }
+  
+  .body1 > * {
+    flex-grow: 1; /* Đảm bảo nội dung chiếm đủ không gian */
+  }
+  

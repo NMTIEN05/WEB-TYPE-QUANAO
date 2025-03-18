@@ -1,0 +1,32 @@
+import React from 'react';
+import './App.css'
+import { Route, Router, useRoutes } from 'react-router-dom';
+import AdminLayout from './competdents/layout/admin';
+import AddProduct from './competdents/product/AddProduct';
+import ListProduct from './competdents/product/ListProduct';
+import EditProduct from './competdents/product/EditProduct';
+import AddCategory from './competdents/category/AddCategory';
+import ListCategory from './competdents/category/ListCategory';
+import EditCategory from './competdents/category/EditCategory';
+import Clinet from './competdents/layout/clinet';
+
+
+function App() {
+const router = useRoutes([
+{path:"dashboard",element:<AdminLayout/>,children:[
+    {path:"/dashboard/add",element:<AddProduct/>},
+    {path:"/dashboard/list",element:<ListProduct/>},
+    {path:"/dashboard/edit/:id",element:<EditProduct/>},
+    {path:"/dashboard/category/add",element:<AddCategory/>},
+    {path:"/dashboard/category/list",element:<ListCategory/>},
+    {path:"/dashboard/edit/category/:id",element:<EditCategory/>},
+]},
+{path:"/",element:<Clinet/>,children:[
+   
+]},
+
+
+])
+return router    
+}
+export default App

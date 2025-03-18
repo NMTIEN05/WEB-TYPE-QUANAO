@@ -1,0 +1,45 @@
+/* Sidebar tổng thể */
+
+/* Tiêu đề Sidebar */
+.sidebar-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Danh sách menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* Mục menu */
+.sidebar-menu li {
+    margin-bottom: 15px;
+    transition: transform 0.2s ease-in-out; /* Hiệu ứng khi hover */
+}
+
+/* Link menu */
+.sidebar-menu li a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 10px 10px;
+    white-space: nowrap;
+    /* border-radius: 6px; */
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover vào link */
+.sidebar-menu li:hover {
+    transform: translateX(10px); /* Di chuyển sang phải */
+}
+
+/* Hover vào link */
+.sidebar-menu li a:hover {
+    background: #c939bd; /* Màu nền khi hover */
+}
