@@ -4,6 +4,9 @@ import { Outlet } from "react-router-dom";
 import Heaferadmin from "./admin/heafer";
 import Footeradmin from "./admin/footer";
 import "./style.css"
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+
 
 
 const AdminLayout = () => {
