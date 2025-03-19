@@ -4,13 +4,13 @@ import FooterClinet from './clinet/FooterClinet'
 import "../layout/Cline.css"
 import MainTop from './clinet/MainTop'
 import MainButton from './clinet/MainButton'
+import { Outlet } from 'react-router-dom'
 
 const Clinet = () => {
   return (
     <div className="body"> 
     <HeaderClinet />
-    <MainTop />
-    <MainButton />
+    <Outlet />
     <FooterClinet />
   </div> 
   )

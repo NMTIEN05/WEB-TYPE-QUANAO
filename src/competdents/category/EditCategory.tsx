@@ -70,7 +70,7 @@ const EditCategory = () => {
         ></textarea>
         {errors.describe && <p className="error-message">{errors.describe.message}</p>}
       </div>
-
+<br />
       <button type="submit" className="btn btn-primary">Update Category</button>
     </form>
   );

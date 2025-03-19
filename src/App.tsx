@@ -13,6 +13,9 @@ import Register from './competdents/auth/Register';
 import Login from './competdents/auth/Login';
 import ListAuthbyadmin from './competdents/admin-auth/ListAuthbyadmin';
 import EditAuthbyadmin from './competdents/admin-auth/EditAuthbyadmin';
+import MainZin from './competdents/layout/clinet/MainZin';
+import DetelProduct from './competdents/layout/clinet/DetelProduct';
+import Cart from './competdents/layout/clinet/Cart';
 
 function App() {
 const router = useRoutes([
@@ -32,8 +35,12 @@ const router = useRoutes([
 ]},
 {path:"/",element:<Clinet/>,children:[
     
+    {path:"/",element:<MainZin/>},
+    {path:"/product/:id",element:<DetelProduct/>},
+    {path:"/cart",element:<Cart/>},
 
-   
+
+    
 ]},
 
 

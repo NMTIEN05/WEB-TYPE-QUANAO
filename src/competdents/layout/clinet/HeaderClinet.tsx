@@ -48,7 +48,7 @@ const HeaderClient = () => {
                   </div>
                 </div>
                 <div className="cart">
-                  <a href="cart.html" className="cart">
+                  <a href="/cart" className="cart">
                     <i className="fa-solid fa-shopping-cart"></i>
                   </a>
                 </div>
