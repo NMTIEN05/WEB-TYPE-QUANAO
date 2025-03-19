@@ -11,8 +11,8 @@ import EditCategory from './competdents/category/EditCategory';
 import Clinet from './competdents/layout/clinet';
 import Register from './competdents/auth/Register';
 import Login from './competdents/auth/Login';
-
-
+import ListAuthbyadmin from './competdents/admin-auth/ListAuthbyadmin';
+import EditAuthbyadmin from './competdents/admin-auth/EditAuthbyadmin';
 
 function App() {
 const router = useRoutes([
@@ -25,6 +25,10 @@ const router = useRoutes([
     {path:"/dashboard/category/add",element:<AddCategory/>},
     {path:"/dashboard/category/list",element:<ListCategory/>},
     {path:"/dashboard/edit/category/:id",element:<EditCategory/>},
+    {path:"/dashboard/auth/list",element:<ListAuthbyadmin/>},
+    {path:"/dashboard/auth/edit/:id",element:<EditAuthbyadmin/>},
+
+
 ]},
 {path:"/",element:<Clinet/>,children:[
     

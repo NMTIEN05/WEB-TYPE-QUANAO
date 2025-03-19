@@ -12,7 +12,7 @@ const Sidebar = () => {
   return (
     <aside className="sidebar bg-gray-200 p-4"> {/* Sử dụng bg-gray-200 và không đặt text-white */}
       <h2 className="sidebar-title text-xl font-bold mb-4 text-gray-800 text-center">
-        ADMIN
+        <img src="" alt="" />
       </h2>
       <nav>
         <ul className="sidebar-menu space-y-4">
@@ -46,7 +46,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/dashboard/customer"
+                    to="/dashboard/auth/list"
                     className="block px-4 py-2 hover:bg-gray-400 rounded text-gray-800"
                   >
                     Quản lý Khách Hàng

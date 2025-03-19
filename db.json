@@ -5,7 +5,15 @@
       "password": "$2a$10$Bx6ATF.YLM.ibiA.ko22LOqfz8Z8T9hQ4vn5z9D/7OMTvOFtV.bMm",
       "name": "Nguyễn Mạnh Tiến",
       "sdt": "0372229304",
+      "role": "admin",
       "id": 1
+    },
+    {
+      "email": "Tien@gmail.com",
+      "password": "$2a$10$ayoyu95J6dvsgUPyDX2wBeFZ48JSpxg6Lfpk4YXp2/x7ZphGmUMhm",
+      "name": "van hung",
+      "sdt": "0888888888",
+      "id": 2
     }
   ],
   "categorys": [
@@ -38,7 +46,7 @@
       "name": "Quần DSQUARED2 Vảy Sơn",
       "price": "200000",
       "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5j3bt2b",
-      "categorys": "DSQ",
+      "categorys": "Aó  Phông",
       "describe": "Dsquared2 là một phụ kiện hoàn hảo cho những ai yêu thích sự tiện lợi và thời trang. Được chế tác từ chất liệu polyamide cao cấp vừa bền bỉ vừa nhẹ nhàng, chiếc túi có ngăn chính rộng rãi để chứa những vật dụng cần thiết hàng ngày như điện thoại, ví tiền hay chìa khóa. Ngoài ra, ngăn nhỏ phía trước có khóa kéo còn giúp bạn dễ dàng sắp xếp các vật dụng nhỏ một cách ngăn nắp, phù hợp cho cả những buổi dạo phố hay các hoạt động ngoài trời.",
       "id": 1
     },
