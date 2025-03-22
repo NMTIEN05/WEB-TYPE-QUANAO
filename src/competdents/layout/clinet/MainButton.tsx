@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Iproduct } from '../../interface/product';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const MainButton = () => {
+  const [products, setProducts] = useState<Iproduct[]>([]);
+
+  // Fetch dữ liệu sản phẩm từ API
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const { data } = await axios.get('http://localhost:3000/products');
+        setProducts(data);
+      } catch (error) {
+        console.error('Lỗi khi tải danh sách sản phẩm:', error);
+      }
+    };
+    fetchProducts();
+  }, []);
   return (
     <div>
       <h2>
@@ -8,94 +25,21 @@ const MainButton = () => {
 </h2>
 <div className="container">
   <div className="product-full">
-    <div className="product">
-      <img
-        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5khw9cd"
-        alt="Sản phẩm 1"
-        className="product-image"
-      />
-      <div className="product-info">
-        <h2 className="product-name">Sản phẩm 1</h2>
-        <p className="product-price">Giá: 500.000 VND</p>
-      </div>
-    </div>
-    <div className="product">
-      <img
-        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5khw9cd"
-        alt="Sản phẩm 1"
-        className="product-image"
-      />
-      <div className="product-info">
-        <h2 className="product-name">Sản phẩm 1</h2>
-        <p className="product-price">Giá: 500.000 VND</p>
-      </div>
-    </div>
-    <div className="product">
-      <img
-        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5khw9cd"
-        alt="Sản phẩm 1"
-        className="product-image"
-      />
-      <div className="product-info">
-        <h2 className="product-name">Sản phẩm 1</h2>
-        <p className="product-price">Giá: 500.000 VND</p>
-      </div>
-    </div>
-    <div className="product">
-      <img
-        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5khw9cd"
-        alt="Sản phẩm 1"
-        className="product-image"
-      />
-      <div className="product-info">
-        <h2 className="product-name">Sản phẩm 1</h2>
-        <p className="product-price">Giá: 500.000 VND</p>
-      </div>
-    </div>
-    <div className="product hidden">
-      <img
-        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5khw9cd"
-        alt="Sản phẩm 1"
-        className="product-image"
-      />
-      <div className="product-info">
-        <h2 className="product-name">Sản phẩm 1</h2>
-        <p className="product-price">Giá: 500.000 VND</p>
-      </div>
-    </div>
-    <div className="product hidden">
-      <img
-        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5khw9cd"
-        alt="Sản phẩm 1"
-        className="product-image"
-      />
-      <div className="product-info">
-        <h2 className="product-name">Sản phẩm 1</h2>
-        <p className="product-price">Giá: 500.000 VND</p>
-      </div>
-    </div>
-    <div className="product hidden">
-      <img
-        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5khw9cd"
-        alt="Sản phẩm 1"
-        className="product-image"
-      />
-      <div className="product-info">
-        <h2 className="product-name">Sản phẩm 1</h2>
-        <p className="product-price">Giá: 500.000 VND</p>
-      </div>
-    </div>
-    <div className="product hidden">
-      <img
-        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5khw9cd"
-        alt="Sản phẩm 1"
-        className="product-image"
-      />
-      <div className="product-info">
-        <h2 className="product-name">Sản phẩm 1</h2>
-        <p className="product-price">Giá: 500.000 VND</p>
-      </div>
-    </div>
+    {products.map((item,index)=>(
+ <div className="product">
+ <Link to={`product/${item.id}`} ><img
+   src={item.image}
+   alt="Sản phẩm 1"
+   className="product-image"
+ /></Link>
+ <div className="product-info">
+   <h5 className="product-name">{item.name}</h5>
+   <p className="product-price">{item.price} VND</p>
+ </div>
+</div>
+    ))}
+   
+
   </div>
 </div>
 <button id="loadMore">Xem Thêm</button>

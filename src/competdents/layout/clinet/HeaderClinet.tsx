@@ -2,8 +2,25 @@ import React, { useEffect, useState } from 'react';
 import "./style.css";
 import { Link } from 'react-router-dom';
 import logo2 from "./images/logo2.png"
+import { Icategory } from '../../interface/category';
+import axios from 'axios';
 
 const HeaderClient = () => {
+  const [category, setCategory] = useState<Icategory[]>([])
+
+  // Lấy danh sách danh mục từ API
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const { data } = await axios.get(`http://localhost:3000/categorys`)
+        setCategory(data)
+      } catch (error) {
+        console.error('Có lỗi khi lấy dữ liệu:', error)
+      }
+    }
+
+    fetchCategories()
+  }, [])
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -59,10 +76,12 @@ const HeaderClient = () => {
 
         <div className="header-button">
           <ul>
-            <li><a href="index.html">Trang Chủ</a></li>
-            <li><a href="category.html">Sản Phẩm 1</a></li>
-            <li><a href="category.html">Sản Phẩm 2</a></li>
-            <li><a href="category.html">Sản Phẩm 3</a></li>
+            {category.map((item,index)=>(
+              <li>
+                <Link to={`/category/${item.id}`}><a href="index.html">{item.namecategory}</a></Link>
+                
+                </li>
+            ))}
           </ul>
         </div>
       </header>

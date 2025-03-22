@@ -1,24 +1,47 @@
-import React from 'react'
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { Iproduct } from "../../interface/product";
+import axios from "axios";
 
-const DetelProduct = () => {
-  return (
-    <div>
-    
-    <div className="product-detail">
-                <img src="https://bedental.vn/wp-content/uploads/2022/11/ho-1024x1024.jpg" alt="Sản phẩm" />
-                <div className="product-info">
-                    <h2>Tên Sản Phẩm</h2>
-                    <p>Mô tả ngắn về sản phẩm. Đây là sản phẩm chất lượng cao, phù hợp với mọi nhu cầu của bạn.</p>
-                    <p className="price">Giá: 500,000 VNĐ</p>
-                    <div className="buttons">
-                        <button className="add-to-cart"><i className="fa-solid fa-shopping-cart"></i>{'\u00A0'}Add To Cart</button>
-                        <button className="buy-now"><i className="bi bi-lightning-fill"></i>{'\u00A0'} Buy Now</button>
-                    </div>
+const ProductDetail = () => {
+    const { id } = useParams<{ id: string }>(); // Lấy id từ URL
+    const [product, setProduct] = useState<Iproduct | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            try {
+                const res = await axios.get<Iproduct>(`http://localhost:3000/products/${id}`);
+                setProduct(res.data); 
+            } catch (error) {
+                console.error("Lỗi khi lấy sản phẩm:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProduct();
+    }, [id]);
+
+    if (loading) return <p>Đang tải...</p>;
+    if (!product) return <p>Sản phẩm không tồn tại</p>;
+
+    return (
+        <div className="product-detail">
+            <img src={product.image || "https://bedental.vn/wp-content/uploads/2022/11/ho-1024x1024.jpg"} 
+                 alt={product.name} 
+                 width={300} />
+            <div className="product-info">
+                <h2>{product.name}</h2>
+                <p>{product.describe || "Mô tả sản phẩm chưa cập nhật."}</p>
+                <p className="price">Giá: {product.price} VNĐ</p>
+                <div className="buttons">
+                    <button className="add-to-cart">Thêm vào giỏ hàng</button>
+                    <button className="buy-now">Mua ngay</button>
                 </div>
             </div>
-    
-    </div>
-  )
-}
+        </div>
+    );
+};
 
-export default DetelProduct
+export default ProductDetail;
