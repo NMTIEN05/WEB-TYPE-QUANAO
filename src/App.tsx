@@ -18,6 +18,7 @@ import DetelProduct from './competdents/layout/clinet/DetelProduct';
 import Cart from './competdents/layout/clinet/Cart';
 import ProductDetail from './competdents/layout/clinet/DetelProduct';
 import ProductByCategory from './competdents/layout/clinet/ProductById';
+import Account from './competdents/layout/clinet/accout';
 
 function App() {
 const router = useRoutes([
@@ -41,6 +42,8 @@ const router = useRoutes([
     {path:"/product/:id",element:<ProductDetail />},
     {path:"/category/:id",element:<ProductByCategory />},
     {path:"/category/product/:id",element:<ProductDetail />},
+    {path:"/accout",element:<Account />},
+
 
 
     {path:"/cart",element:<Cart/>},

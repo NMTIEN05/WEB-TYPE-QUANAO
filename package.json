@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "db": "npx json-server db.json -m ./node_modules/json-server-auth",
+    "db": "npx json-server db.json --watch",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -31,7 +31,6 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "json-server-auth": "^2.1.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }

@@ -1,0 +1,207 @@
+/* Container chính */
+.cart-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tiêu đề */
+  h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Mỗi sản phẩm trong giỏ hàng */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .cart-item:hover {
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  /* Ảnh sản phẩm */
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Thông tin sản phẩm */
+  .item-info {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #222;
+  }
+  
+  .item-info p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Điều chỉnh số lượng */
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-control button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .quantity-control button:hover {
+    background-color: #0056b3;
+  }
+  
+  .quantity-control span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Nút xóa */
+  .remove-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .remove-btn:hover {
+    background-color: #b02a37;
+  }
+  
+  /* Tổng tiền và phí ship */
+  .total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .total span {
+    color: #ff6600;
+  }
+  
+  /* Nút thanh toán */
+  .checkout-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .checkout {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .checkout:hover {
+    background-color: #218838;
+  }
+  .Link{
+    background-color: #a49a2d;
+  }
+  
+
+
+  .account-containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    /* min-height: 100vh; */
+    /* background-color: #0b2e74; */
+  }
+  
+  .account-card {
+    background: rgb(47, 164, 162);
+    /* padding: 100px; */
+    padding: 24px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .account-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #3b82f6;
+    margin-bottom: 12px;
+  }
+  
+  .account-info {
+    margin-top: 12px;
+  }
+  
+  .account-info p {
+    color: #4b5563;
+    font-size: 14px;
+    margin-bottom: 40px; /* Tăng khoảng cách */
+  }
+  
+  
+  .account-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    padding: 8px 16px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .account-edit i {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  
+  .account-edit:hover {
+    background: #ef4444;
+  }
+  
