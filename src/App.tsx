@@ -18,14 +18,21 @@ import DetelProduct from './competdents/layout/clinet/DetelProduct';
 import Cart from './competdents/layout/clinet/Cart';
 import ProductDetail from './competdents/layout/clinet/DetelProduct';
 import ProductByCategory from './competdents/layout/clinet/ProductById';
-import Account from './competdents/layout/clinet/accout';
+import Account from './competdents/layout/clinet/User/accout';
+import EditAccount from './competdents/layout/clinet/User/EditAcount';
+import AdminComments from './competdents/commets/commentList';
+// import Account from './competdents/layout/clinet/User/accout';
 
 function App() {
 const router = useRoutes([
     {path:"/register",element:<Register/>},
     {path:"/login",element:<Login/>},
+
+    
 {path:"dashboard",element:<AdminLayout/>,children:[
     {path:"/dashboard/add",element:<AddProduct/>},
+    {path:"/dashboard/commets",element:<AdminComments/>},
+
     {path:"/dashboard/list",element:<ListProduct/>},
     {path:"/dashboard/edit/:id",element:<EditProduct/>},
     {path:"/dashboard/category/add",element:<AddCategory/>},
@@ -43,6 +50,8 @@ const router = useRoutes([
     {path:"/category/:id",element:<ProductByCategory />},
     {path:"/category/product/:id",element:<ProductDetail />},
     {path:"/accout",element:<Account />},
+    {path:"/edit-account",element:<EditAccount />},
+
 
 
 

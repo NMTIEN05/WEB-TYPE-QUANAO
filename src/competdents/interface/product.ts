@@ -3,7 +3,7 @@ export interface Iproduct {
     name: string,
     describe: string, 
     image: string,
-    categorys:string,
+    categorys:number,
     price: number,
 }
 export type Ifrom = Omit<Iproduct, "id">

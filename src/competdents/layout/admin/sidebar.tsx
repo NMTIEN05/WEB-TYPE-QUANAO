@@ -30,7 +30,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/dashboard/list" className="block px-4 py-2 hover:bg-gray-300 rounded">
+            <Link to="/dashboard/commets" className="block px-4 py-2 hover:bg-gray-300 rounded">
             <i className="fas fa-comment"></i>{'\u00A0'}   Bình Luận
             </Link>
           </li>

@@ -5,71 +5,70 @@ import { Iproduct } from "../../interface/product";
 import { Icategory } from "../../interface/category";
 
 const ProductByCategory = () => {
-    const { category } = useParams<{ category: string }>(); // Lấy category từ URL
+    const { id } = useParams(); // Lấy ID danh mục từ URL
     const [products, setProducts] = useState<Iproduct[]>([]);
     const [loading, setLoading] = useState(true);
-    const [categorys, setCategory] = useState<Icategory[]>([])
-
+    const [category, setCategory] = useState<Icategory | null>(null);
 
     useEffect(() => {
-        const fetchProductsByCategory = async () => {
+        const fetchCategoryAndProducts = async () => {
             try {
-                const res = await axios.get<Iproduct[]>(`http://localhost:3000/products?category=${category}`);
-                setProducts(res.data);
+                if (!id) return;
+
+                // 🛑 Lấy danh sách danh mục
+                const { data: categories } = await axios.get("http://localhost:3000/categorys");
+                const category = categories.find((c: Icategory) => c.id === Number(id));
+
+                if (!category) {
+                    console.error("Không tìm thấy danh mục!");
+                    setLoading(false);
+                    return;
+                }
+                setCategory(category);
+
+                // 🛑 Lấy danh sách sản phẩm
+                const { data: allProducts } = await axios.get("http://localhost:3000/products");
+
+                // 🔹 Lọc sản phẩm theo `namecategory`
+                const filteredProducts = allProducts.filter((p: Iproduct) => p.categorys === category.namecategory);
+
+                setProducts(filteredProducts);
             } catch (error) {
-                console.error("Lỗi khi lấy sản phẩm theo danh mục:", error);
+                console.error("Có lỗi khi lấy dữ liệu:", error);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchProductsByCategory();
-    }, [category]);
-
-    // Lấy danh sách danh mục từ API
-    useEffect(() => {
-      const fetchCategories = async () => {
-        try {
-          const { data } = await axios.get(`http://localhost:3000/categorys`)
-          setCategory(data)
-        //   console.log(data);
-          
-        } catch (error) {
-          console.error('Có lỗi khi lấy dữ liệu:', error)
-        }
-      }
-  
-      fetchCategories()
-    }, [])
-  
+        fetchCategoryAndProducts();
+    }, [id]);
 
     if (loading) return <p>Đang tải...</p>;
-    if (products.length === 0) return <p>Không có sản phẩm nào trong danh mục này</p>;
+    if (!category) return <p>Không tìm thấy danh mục</p>;
 
     return (
         <div className="product-list">
             <br />
-            <h3>Danh sách sản phẩm thuộc danh mục:</h3>
+            <h3>Danh sách sản phẩm thuộc danh mục: {category.namecategory}</h3>
             <div className="container">
-             <div className="product-full">
-                {products.map((item)=>(
-             <div className="product">
-             <Link to={`/category/product/${item.id}`} ><img
-               src={item.image}
-               alt="Sản phẩm 1"
-               className="product-image"
-             /></Link>
-             <div className="product-info">
-               <h5 className="product-name">{item.name}</h5>
-               <p className="product-price">{item.price} VND</p>
-             </div>
-             
+                <div className="product-full">
+                    {products.length === 0 ? (
+                        <p>Không có sản phẩm nào trong danh mục này</p>
+                    ) : (
+                        products.map((item) => (
+                            <div className="product" key={item.id}>
+                                <Link to={`/category/product/${item.id}`}>
+                                    <img src={item.image} alt={item.name} className="product-image" />
+                                </Link>
+                                <div className="product-info">
+                                    <h5 className="product-name">{item.name}</h5>
+                                    <p className="product-price">{item.price} VND</p>
+                                </div>
+                            </div>
+                        ))
+                    )}
+                </div>
             </div>
-            
-                ))}
-               
-               </div>
-              </div>
         </div>
     );
 };

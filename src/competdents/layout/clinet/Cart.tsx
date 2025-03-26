@@ -1,36 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./cart.css";
 import { useShoppingContext } from "../contexts.tsx/ShoppingContext";
-import axios from "axios";
-
-type CartItem = {
-  id: number;
-  name: string;
-  price: number;
-  sl: number;
-  image: string;
-};
 
 const Cart = () => {
-  const [cart, setCart] = useState<CartItem[]>([]); // ✅ Khai báo kiểu dữ liệu
-  const { totalPrice, increaseQty, decreaseQty, removeCartItem } = useShoppingContext();
+  const { cartItem, totalPrice, increaseQty, decreaseQty, removeCartItem } = useShoppingContext(); // Lấy giỏ hàng từ context
 
-  useEffect(() => {
-    const fetchCart = async () => {
-      try {
-        const { data } = await axios.get("http://localhost:3000/carts");
-        console.log("Danh sách sản phẩm từ API:", data);
-        setCart(data.flat()); // ✅ Ép kiểu nếu cần
-      } catch (error) {
-        console.error("Lỗi khi lấy giỏ hàng:", error);
-      }
-    };
-    fetchCart();
-  }, []);
-
-  console.log("Giỏ hàng hiện tại:", cart);
-  console.log("Kiểu dữ liệu giỏ hàng:", typeof cart);
-  console.log("Số lượng sản phẩm:", cart.length);
+  console.log("Giỏ hàng hiện tại:", cartItem);
 
   const shippingFee = 0;
 
@@ -38,8 +13,8 @@ const Cart = () => {
     <div>
       <h2>Giỏ hàng của bạn</h2>
       <div className="cart-container">
-        {cart.length > 0 ? (
-          cart.map((item) => (
+        {cartItem.length > 0 ? (
+          cartItem.map((item) => (
             <div key={item.id} className="cart-item">
               <img src={item.image} alt={item.name} width={80} />
               <div className="item-info">

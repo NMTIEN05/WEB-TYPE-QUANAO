@@ -5,6 +5,7 @@ export interface Iuser {
     email:string,
     password: string,
     role?: string;
+    address : string;
 }
 export type IRegister = Omit<Iuser, "id">
 export type ILogin = Pick<Iuser, "email"|"password"|"role">

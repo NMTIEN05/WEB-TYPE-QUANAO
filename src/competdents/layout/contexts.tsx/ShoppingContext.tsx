@@ -1,7 +1,6 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
-
 const API_URL = "http://localhost:3000/carts";
 
 type ShoppingContextProviderProps = {
@@ -47,80 +46,73 @@ export const useShoppingContext = () => {
 export const ShoppingContextProvider = ({ children }: ShoppingContextProviderProps) => {
     const [cartItem, setCartItem] = useState<CartItem[]>([]);
 
-    useEffect(() => {
-        const fetchCart = async () => {
-            try {
-                const response = await axios.get(API_URL);
-                setCartItem(response.data);
-            } catch (error) {
-                console.error("Error fetching cart:", error);
-            }
-        };
-        fetchCart();
-    }, []);
-
-    const updateCartItemInDB = async (id: number, updatedItem: CartItem) => {
+    const fetchCart = async () => {
         try {
-            await axios.put(`${API_URL}/${id}`, updatedItem);
+            const response = await axios.get(API_URL);
+            setCartItem(response.data);
         } catch (error) {
-            console.error("Error updating cart item:", error);
+            console.error("Error fetching cart:", error);
         }
     };
 
+    useEffect(() => {
+        fetchCart();
+    }, []);
+
     const addCartItem = async (product: ProductItem) => {
-        setCartItem((prev) => {
-            const existingItem = prev.find((item) => item.id === product.id);
-            let newCart;
+        try {
+            const existingItem = cartItem.find((item) => item.id === product.id);
             if (existingItem) {
-                newCart = prev.map((item) =>
-                    item.id === product.id ? { ...item, sl: item.sl + 1 } : item
-                );
-                updateCartItemInDB(product.id, newCart.find((item) => item.id === product.id)!);
+                const updatedItem = { ...existingItem, sl: existingItem.sl + 1 };
+                await axios.put(`${API_URL}/${product.id}`, updatedItem);
             } else {
-                const newItem = { ...product, sl: 1 };
-                newCart = [...prev, newItem];
-                axios.post(API_URL, newItem).catch((error) => console.error("Error adding product:", error));
+                await axios.post(API_URL, { ...product, sl: 1 });
             }
-            return newCart;
-        });
+            fetchCart(); // Cập nhật lại giỏ hàng sau khi API hoàn thành
+        } catch (error) {
+            console.error("Error adding product:", error);
+        }
     };
 
-    const increaseQty = (id: number) => {
-        setCartItem((prev) => {
-            const newCart = prev.map((item) =>
-                item.id === id ? { ...item, sl: item.sl + 1 } : item
-            
-            );
-            
-            updateCartItemInDB(id, newCart.find((item) => item.id === id)!);
-            
-            return newCart;
-        });
+    const increaseQty = async (id: number) => {
+        try {
+            const item = cartItem.find((item) => item.id === id);
+            if (!item) return;
+
+            const updatedItem = { ...item, sl: item.sl + 1 };
+            await axios.put(`${API_URL}/${id}`, updatedItem);
+            fetchCart(); // Cập nhật lại giỏ hàng sau khi API hoàn thành
+        } catch (error) {
+            console.error("Error increasing quantity:", error);
+        }
     };
 
-    const decreaseQty = (id: number) => {
-        setCartItem((prev) => {
-            const newCart = prev.map((item) =>
-                item.id === id ? { ...item, sl: item.sl > 1 ? item.sl - 1 : 1 } : item
-            );
-            updateCartItemInDB(id, newCart.find((item) => item.id === id)!);
-            return newCart;
-        });
+    const decreaseQty = async (id: number) => {
+        try {
+            const item = cartItem.find((item) => item.id === id);
+            if (!item || item.sl <= 1) return;
+
+            const updatedItem = { ...item, sl: item.sl - 1 };
+            await axios.put(`${API_URL}/${id}`, updatedItem);
+            fetchCart(); // Cập nhật lại giỏ hàng sau khi API hoàn thành
+        } catch (error) {
+            console.error("Error decreasing quantity:", error);
+        }
     };
 
-    const removeCartItem = (id: number) => {
-        setCartItem((prev) => {
-            const newCart = prev.filter((item) => item.id !== id);
-            axios.delete(`${API_URL}/${id}`).catch((error) => console.error("Error removing product:", error));
-            return newCart;
-        });
+    const removeCartItem = async (id: number) => {
+        try {
+            await axios.delete(`${API_URL}/${id}`);
+            fetchCart(); // Cập nhật lại giỏ hàng sau khi API hoàn thành
+        } catch (error) {
+            console.error("Error removing product:", error);
+        }
     };
 
     const clearCart = async () => {
-        setCartItem([]);
         try {
-            const requests = cartItem.map((item) => axios.delete(`${API_URL}/${item.id}`));
-            await Promise.all(requests);
+            await Promise.all(cartItem.map((item) => axios.delete(`${API_URL}/${item.id}`)));
+            fetchCart(); // Cập nhật lại giỏ hàng sau khi API hoàn thành
         } catch (error) {
             console.error("Error clearing cart:", error);
         }

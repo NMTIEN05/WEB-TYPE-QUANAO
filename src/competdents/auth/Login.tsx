@@ -16,21 +16,27 @@ const Login = () => {
 
   const onSubmit = async (data: ILogin) => {
     try {
-      // Chuẩn hóa email và password
       const emailTrimmed = data.email.trim().toLowerCase();
       const passwordTrimmed = data.password.trim();
 
-      // 🛑 Chỉ tìm user theo email trong JSON Server
+      // 🛑 Tìm user theo email
       const response = await axios.get(`http://localhost:3000/users?email=${emailTrimmed}`);
 
       if (response.data.length > 0) {
-        const user = response.data[0]; // Lấy user đầu tiên từ JSON Server
-        
-        // 🛑 Kiểm tra password trên frontend
+        const user = response.data[0];
+
+        // 🔴 So sánh trực tiếp mật khẩu nhập vào với mật khẩu đã lưu (không dùng mã hóa)
         if (user.password === passwordTrimmed) {
-          localStorage.setItem("user", JSON.stringify(user)); // Lưu user vào localStorage
-          alert("Đăng nhập thành công!");
-          navigate("/");
+          localStorage.setItem("user", JSON.stringify(user));
+
+          // 🛑 Nếu là admin, chuyển hướng tới dashboard
+          if (user.role === "admin") {
+            alert("Đăng nhập admin thành công!");
+            navigate("/dashboard");
+          } else {
+            alert("Đăng nhập thành công!");
+            navigate("/");
+          }
         } else {
           alert("Sai mật khẩu!");
         }

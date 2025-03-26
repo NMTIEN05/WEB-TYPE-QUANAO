@@ -10,7 +10,7 @@ const EditAuthbyadmin = () => {
   const { register, handleSubmit, setValue, formState: { errors } } = useForm<IRegister>();
   const [passwordType, setPasswordType] = useState("password");
 
-  // Lấy thông tin user hiện tại để hiển thị lên form
+  // Lấy thông tin user hiện tại
   useEffect(() => {
     axios.get(`http://localhost:3000/users/${id}`)
       .then((response) => {
@@ -19,6 +19,7 @@ const EditAuthbyadmin = () => {
         setValue("sdt", userData.sdt);
         setValue("email", userData.email);
         setValue("password", userData.password);
+        setValue("address", userData.address); // Thêm dòng này
       })
       .catch(() => alert("Lỗi khi tải dữ liệu người dùng!"));
   }, [id, setValue]);
@@ -28,19 +29,19 @@ const EditAuthbyadmin = () => {
     axios.put(`http://localhost:3000/users/${id}`, data)
       .then(() => {
         alert("Cập nhật thông tin thành công!");
-        navigate("/dashboard/auth"); // Quay lại trang danh sách user
+        navigate("/dashboard/auth");
       })
       .catch(() => alert("Có lỗi xảy ra. Vui lòng thử lại."));
   };
 
-  // Hiển thị/Mật khẩu
+  // Hiển thị/mật khẩu
   const togglePasswordVisibility = () => {
     setPasswordType(passwordType === "password" ? "text" : "password");
   };
 
   return (
     <div className="container mt-3">
-      <form className="row g-3">
+      <form className="row g-3" onSubmit={handleSubmit(onSubmit)}>
         <h3>Chi Tiết Người Dùng</h3>
 
         {/* Name */}
@@ -96,7 +97,22 @@ const EditAuthbyadmin = () => {
           {errors.password && <p className="text-danger">{errors.password.message}</p>}
         </div>
 
-        
+        {/* Địa chỉ nhận hàng */}
+        <div className="col-md-12">
+          <label htmlFor="address" className="form-label">Địa Chỉ Nhận Hàng</label>
+          <input 
+            type="text" 
+            className="form-control" 
+            id="address" 
+            {...register("address", { required: "Địa chỉ không được để trống" })}
+          />
+          {errors.address && <p className="text-danger">{errors.address.message}</p>}
+        </div>
+
+        {/* Submit Button */}
+        <div className="col-12">
+          <button type="submit" className="btn btn-primary">Cập Nhật</button>
+        </div>
       </form>
     </div>
   );

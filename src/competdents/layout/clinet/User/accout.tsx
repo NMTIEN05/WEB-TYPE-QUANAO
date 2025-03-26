@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./cart.css";
-import { IRegister } from "../../interface/user";
+// import "./cart.css";
+import { IRegister } from "../../../interface/user";
 
 const Account: React.FC = () => {
   const [user, setUser] = useState<IRegister | null>(null);
@@ -39,7 +39,7 @@ const Account: React.FC = () => {
           <p><strong>Họ Và Tên:</strong> {user.name || "Chưa có thông tin"}</p>
           <p><strong>Email:</strong> {user.email || "Chưa có thông tin"}</p>
           <p><strong>SĐT:</strong> {user.sdt || "Chưa có thông tin"}</p>
-          {/* <p><strong>Địa Chỉ:</strong> {user.address || "Chưa có thông tin"}</p>  */}
+          <p><strong>Địa Chỉ Nhận Hàng:</strong> {user.address || "Chưa có thông tin"}</p> 
         </div>
 
         {/* Nút Chỉnh Sửa */}
