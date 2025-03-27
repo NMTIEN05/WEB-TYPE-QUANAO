@@ -71,7 +71,7 @@ const HeaderClient = () => {
                     ) : (
                       <>
                       <Link to={"/accout"}>Account</Link>
-                      <Link to={"/accout"}>Đơn Hàng</Link>
+                      <Link to={"/order"}>Đơn Hàng</Link>
                       <Link onClick={handleLogout} to={''}>Đăng Xuất</Link> 
 
 

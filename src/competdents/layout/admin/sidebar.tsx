@@ -67,7 +67,7 @@ const Sidebar = () => {
             
           </li>
           <li>
-            <Link to="/dashboard/list" className="block px-4 py-2 hover:bg-gray-300 rounded">
+            <Link to="/dashboard/order/list" className="block px-4 py-2 hover:bg-gray-300 rounded">
             <i className="fas fa-box"></i>  {'\u00A0'}   ORDER
             </Link>
           </li>

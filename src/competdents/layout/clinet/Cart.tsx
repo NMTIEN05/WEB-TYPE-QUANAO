@@ -1,6 +1,7 @@
 import React from "react";
 import "./cart.css";
 import { useShoppingContext } from "../contexts.tsx/ShoppingContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cartItem, totalPrice, increaseQty, decreaseQty, removeCartItem } = useShoppingContext(); // Lấy giỏ hàng từ context
@@ -36,7 +37,8 @@ const Cart = () => {
         <p className="total">Phí Ship: <span>{shippingFee.toLocaleString()}</span>đ</p>
         <p className="total">Tổng Thanh Toán: <span>{totalPrice.toLocaleString()}</span>đ</p>
         <div className="checkout-container">
-          <button className="checkout">Mua Ngay</button>
+          {/* <button className="checkout">Mua Ngay</button> */}
+          <Link className="checkout" to={"/order-detel"}>Mua Ngay</Link>
         </div>
       </div>
     </div>

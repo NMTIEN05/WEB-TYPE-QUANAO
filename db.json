@@ -24,6 +24,58 @@
       "sdt": "0372229304",
       "id": 3,
       "address": "ANh "
+    },
+    {
+      "email": "tienaaaaaa@gmail.com",
+      "password": "tienaaaaaa@gmail.com",
+      "name": "Hiep",
+      "sdt": "0372229304",
+      "id": 4
+    },
+    {
+      "email": "phamthid@example.com",
+      "password": "phamthid@example.com",
+      "name": "Nam Anh",
+      "sdt": "033333333",
+      "id": 5
+    },
+    {
+      "email": "tienbao2005@gmail.com",
+      "password": "tienbao2005@gmail.com",
+      "name": "Tiến ĐZ VCL",
+      "sdt": "0338845674",
+      "id": 6,
+      "address": "Ở nhà Mà"
+    },
+    {
+      "email": "phamthid@example.com",
+      "password": "phamthid@example.com",
+      "name": "Nguyễn Mạnh ",
+      "sdt": "0888888888",
+      "id": 7
+    },
+    {
+      "email": "tien10D@gmai.com",
+      "password": "tien10D@gmai.com",
+      "name": "A Là Tiến ĐZ",
+      "sdt": "0372229304",
+      "id": 8
+    },
+    {
+      "email": "tienbao200501@gmail.com",
+      "password": "tienbao200501@gmail.com",
+      "name": "Tiến Lá S1",
+      "sdt": "03333333",
+      "id": 9,
+      "address": "Số Nhà 1"
+    },
+    {
+      "email": "ohw72649@bcooq.com",
+      "password": "ohw72649@bcooq.com",
+      "name": "Khanh Phong",
+      "sdt": "037222444",
+      "id": 10,
+      "address": "Số Nhà 1"
     }
   ],
   "categorys": [
@@ -110,27 +162,9 @@
       "categorys": "DSQ",
       "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
       "id": 9
-    },
-    {
-      "name": "Nguyễn Mạnh Tiến",
-      "price": "7",
-      "image": "https://cdn.sforum.vn/sforum/wp-content/uploads/2023/06/phim-hoat-hinh-tom-va-jerry-thumb.jpg",
-      "categorys": "DSQ",
-      "describe": "sss",
-      "id": 10
     }
   ],
-  "carts": [
-    {
-      "name": "Quần DSQUARED2 Vảy Sơn likeaut",
-      "price": "55555",
-      "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltdw003ckexl9b",
-      "categorys": "DSQ",
-      "describe": "Đặc điểm nổi bật\nKiểu dáng túi phom chữ nhật thời trang\nGồm 1 ngăn chính rộng rãi và 1 ngăn zip nhỏ ở phía trước\nChất da mềm mại, sang trọng\nMàu sắc hiện đại dễ dàng phối với nhiều trang phục và phụ kiện khác",
-      "id": 2,
-      "sl": 2
-    }
-  ],
+  "carts": [],
   "comments": [
     {
       "comment": "tiennmph50685@gmail.com: aa",
@@ -141,6 +175,42 @@
       "comment": "tiennmph50685@gmail.com: ass",
       "productId": 2,
       "id": 7
+    },
+    {
+      "comment": "phamthid@example.com: dsyijl;\n",
+      "productId": 2,
+      "id": 8
+    }
+  ],
+  "orders": [
+    {
+      "orderCode": "ORD-lmez31vtd",
+      "orderDate": "2025-03-27T13:49:00.040Z",
+      "user": {
+        "email": "ohw72649@bcooq.com",
+        "password": "ohw72649@bcooq.com",
+        "name": "Khanh Phong",
+        "sdt": "037222444",
+        "id": 10,
+        "address": "Số Nhà 1"
+      },
+      "cartItems": [
+        {
+          "name": "Quần DSQUARED2 Vảy Sơn",
+          "price": "200000",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5j3bt2b",
+          "categorys": "Aó  Phông",
+          "describe": "Dsquared2 là một phụ kiện hoàn hảo cho những ai yêu thích sự tiện lợi và thời trang. Được chế tác từ chất liệu polyamide cao cấp vừa bền bỉ vừa nhẹ nhàng, chiếc túi có ngăn chính rộng rãi để chứa những vật dụng cần thiết hàng ngày như điện thoại, ví tiền hay chìa khóa. Ngoài ra, ngăn nhỏ phía trước có khóa kéo còn giúp bạn dễ dàng sắp xếp các vật dụng nhỏ một cách ngăn nắp, phù hợp cho cả những buổi dạo phố hay các hoạt động ngoài trời.",
+          "id": 1,
+          "sl": 1
+        }
+      ],
+      "paymentMethod": "cod",
+      "shippingFee": 30000,
+      "totalAmount": 200000,
+      "grandTotal": 230000,
+      "id": 1,
+      "status": "Đã hủy"
     }
   ]
 }
