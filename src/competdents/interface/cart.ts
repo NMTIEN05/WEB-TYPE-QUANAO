@@ -1,7 +1,8 @@
 export interface ICart {
     id:number
     name: string;
-    price: string;  
+    price: string; 
+    email:string; 
     image: string;
     quantity: number;
     Payment_method:"VNPAY"|"COD";

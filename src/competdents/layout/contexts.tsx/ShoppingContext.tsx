@@ -62,17 +62,28 @@ export const ShoppingContextProvider = ({ children }: ShoppingContextProviderPro
     const addCartItem = async (product: ProductItem) => {
         try {
             const existingItem = cartItem.find((item) => item.id === product.id);
+            
+            // Lấy thông tin người dùng từ localStorage
+            const storedUser = localStorage.getItem("user");
+            let userEmail = "";
+            if (storedUser) {
+                const user = JSON.parse(storedUser); // Phân tích chuỗi JSON
+                userEmail = user.email || ""; // Lấy email hoặc gán chuỗi rỗng nếu không có
+            }
+    
             if (existingItem) {
-                const updatedItem = { ...existingItem, sl: existingItem.sl + 1 };
+                const updatedItem = { ...existingItem, sl: existingItem.sl + 1, email: userEmail };
                 await axios.put(`${API_URL}/${product.id}`, updatedItem);
             } else {
-                await axios.post(API_URL, { ...product, sl: 1 });
+                await axios.post(API_URL, { ...product, sl: 1, email: userEmail });
             }
+            
             fetchCart(); // Cập nhật lại giỏ hàng sau khi API hoàn thành
         } catch (error) {
-            console.error("Error adding product:", error);
+            console.error("Lỗi khi thêm sản phẩm:", error);
         }
     };
+    
 
     const increaseQty = async (id: number) => {
         try {

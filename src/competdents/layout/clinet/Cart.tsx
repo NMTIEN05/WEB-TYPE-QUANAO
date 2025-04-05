@@ -8,14 +8,26 @@ const Cart = () => {
 
   console.log("Giỏ hàng hiện tại:", cartItem);
 
+  // Lấy thông tin người dùng từ localStorage
+  const storedUser = localStorage.getItem("user");
+  let userEmail = "";
+  if (storedUser) {
+    const user = JSON.parse(storedUser); // Phân tích chuỗi JSON
+    userEmail = user.email || ""; // Lấy email hoặc gán chuỗi rỗng nếu không có
+  }
+  console.log("Email người dùng:", userEmail);
+
+  // Lọc giỏ hàng theo email
+  const filteredCartItems = cartItem.filter(item => item.email === userEmail);
+
   const shippingFee = 0;
 
   return (
     <div>
       <h2>Giỏ hàng của bạn</h2>
       <div className="cart-container">
-        {cartItem.length > 0 ? (
-          cartItem.map((item) => (
+        {filteredCartItems.length > 0 ? (
+          filteredCartItems.map((item) => (
             <div key={item.id} className="cart-item">
               <img src={item.image} alt={item.name} width={80} />
               <div className="item-info">
@@ -37,7 +49,6 @@ const Cart = () => {
         <p className="total">Phí Ship: <span>{shippingFee.toLocaleString()}</span>đ</p>
         <p className="total">Tổng Thanh Toán: <span>{totalPrice.toLocaleString()}</span>đ</p>
         <div className="checkout-container">
-          {/* <button className="checkout">Mua Ngay</button> */}
           <Link className="checkout" to={"/order-detel"}>Mua Ngay</Link>
         </div>
       </div>

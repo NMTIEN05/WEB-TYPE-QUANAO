@@ -57,6 +57,7 @@ const ListOrder = () => {
 
       // Gửi PUT request đến API để thay đổi trạng thái
       await axios.put(`http://localhost:3000/orders/${id}`, orderToUpdate);
+      alert("cập nhật thành công")
 
       // Cập nhật trạng thái trong local state sau khi cập nhật thành công
       setOrders((prevOrders) =>
@@ -104,7 +105,7 @@ const ListOrder = () => {
                       value={order.status}
                       onChange={(e) => {
                         // Không cho phép thay đổi trạng thái nếu là "Đã hủy"
-                        if (order.status === 'Đã hủy') {
+                        if (order.status === 'Đã hủy' && 'Đã giao') {
                           return;
                         }
                         setOrders((prevOrders) =>
@@ -115,7 +116,7 @@ const ListOrder = () => {
                           )
                         );
                       }}
-                      disabled={order.status === 'Đã hủy'} // Vô hiệu hóa dropdown khi trạng thái là "Đã hủy"
+                      disabled={order.status === 'Đã hủy'|| order.status === 'Đã giao'} // Vô hiệu hóa dropdown khi trạng thái là "Đã hủy"
                     >
                       <option value="Đang xử lý">Đang xử lý</option>
                       <option value="Đang vận chuyển">Đang vận chuyển</option>
