@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { ICart } from "../../interface/cart";
 import { useNavigate } from "react-router-dom";
+import "./pay.css"; 
 
 const OrderDetails = () => {
   const [cartItems, setCartItems] = useState<ICart[]>([]);
-  const [user, setUser] = useState<any | null>(null); // Sử dụng `any` hoặc có thể tạo interface cho user
+  const [user, setUser] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [paymentMethod, setPaymentMethod] = useState<string>("");
   const [shippingFee, setShippingFee] = useState<number>(0);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   // Hàm để lấy dữ liệu giỏ hàng và thông tin người dùng từ localStorage
   useEffect(() => {
@@ -25,7 +26,7 @@ const OrderDetails = () => {
         // Lấy thông tin người dùng từ localStorage
         const storedUser = localStorage.getItem("user");
         if (storedUser) {
-          setUser(JSON.parse(storedUser)); // Lấy thông tin từ localStorage và lưu vào state
+          setUser(JSON.parse(storedUser));
         }
 
         // Giả sử phí vận chuyển cố định
@@ -46,8 +47,13 @@ const OrderDetails = () => {
     setPaymentMethod(event.target.value);
   };
 
+  // Lọc giỏ hàng theo email của người dùng
+  const filteredCartItems = user
+    ? cartItems.filter(item => item.email === user.email)
+    : [];
+
   // Tính tổng tiền (giá sản phẩm + phí ship)
-  const totalAmount = cartItems.reduce(
+  const totalAmount = filteredCartItems.reduce(
     (total, item) => total + parseInt(item.price) * item.sl,
     0
   );
@@ -58,11 +64,10 @@ const OrderDetails = () => {
     event.preventDefault();
 
     const orderData = {
-      // Mã đơn hàng tự động tạo trên server
-      orderCode: `ORD-${Math.random().toString(36).substr(2, 9)}`,  // Tạo mã đơn tự động
-      orderDate: new Date().toISOString(),  // Ngày đặt đơn hàng
+      orderCode: `ORD-${Math.random().toString(36).substr(2, 9)}`,
+      orderDate: new Date().toISOString(),
       user: user,
-      cartItems: cartItems,
+      cartItems: filteredCartItems,
       paymentMethod: paymentMethod,
       shippingFee: shippingFee,
       totalAmount: totalAmount,
@@ -80,7 +85,7 @@ const OrderDetails = () => {
 
       if (response.ok) {
         alert("Đơn hàng đã được gửi thành công!");
-        navigate("/order")
+        navigate("/list-orders");
       } else {
         alert("Đã có lỗi xảy ra khi gửi đơn hàng.");
       }
@@ -101,7 +106,6 @@ const OrderDetails = () => {
     <div className="container5 mt-4 mb-10" style={{ maxWidth: "800px", margin: "0 auto", border: "1px solid #ddd", padding: "20px", borderRadius: "8px" }}>
       <h2 className="mb-3">Thông Tin Đơn Hàng</h2>
 
-      {/* Form để submit thông tin đơn hàng */}
       <form onSubmit={handleSubmit}>
         <div className="card">
           <div className="card-body">
@@ -128,8 +132,8 @@ const OrderDetails = () => {
                 </tr>
               </thead>
               <tbody>
-                {cartItems.length > 0 ? (
-                  cartItems.map((item, index) => (
+                {filteredCartItems.length > 0 ? (
+                  filteredCartItems.map((item, index) => (
                     <tr key={item.id}>
                       <td>{index + 1}</td>
                       <td>{item.name}</td>

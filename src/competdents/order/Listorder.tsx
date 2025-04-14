@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { OrderStatuses } from "../interface/status";
 
 interface IOrder {
   id: string;
@@ -11,7 +12,7 @@ interface IOrder {
     email: string;
     address: string;
     role: string;
-  } | null; // Thêm null vào để cho phép user có thể là null
+  } | null;
   cartItems: {
     id: number;
     name: string;
@@ -26,15 +27,16 @@ interface IOrder {
 }
 
 const ListOrder = () => {
-  const [orders, setOrders] = useState<IOrder[]>([]);  // Tạo state để chứa danh sách đơn hàng
-  const [loading, setLoading] = useState<boolean>(true);
+  const [orders, setOrders] = useState<IOrder[]>([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedStatuses, setSelectedStatuses] = useState<Record<string, string>>({});
 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/orders');
-        setOrders(response.data); // Lưu dữ liệu vào state
+        const response = await axios.get("http://localhost:3000/orders");
+        setOrders(response.data);
         setLoading(false);
       } catch (err) {
         setError("Lỗi khi tải dữ liệu.");
@@ -45,30 +47,38 @@ const ListOrder = () => {
     fetchOrders();
   }, []);
 
-  const handleStatusChange = async (id: string, newStatus: string) => {
-    try {
-      // Lấy đơn hàng cũ từ state bằng id để giữ nguyên các thông tin khác
-      const updatedOrder = orders.find(order => order.id === id);
+  const handleSelectChange = (id: string, newStatus: string) => {
+    setSelectedStatuses((prev) => ({ ...prev, [id]: newStatus }));
+  };
 
-      if (!updatedOrder) return;
+  const handleStatusChange = async (id: string) => {
+    const order = orders.find((o) => o.id === id);
+    if (!order) return;
 
-      // Cập nhật chỉ trạng thái
-      const orderToUpdate = { ...updatedOrder, status: newStatus };
+    const selectedStatus = selectedStatuses[id];
+    const currentStatus = order.status;
 
-      // Gửi PUT request đến API để thay đổi trạng thái
-      await axios.put(`http://localhost:3000/orders/${id}`, orderToUpdate);
-      alert("cập nhật thành công")
+    if (!selectedStatus || selectedStatus === currentStatus) {
+      alert("⚠️ Vui lòng chọn trạng thái khác để thay đổi.");
+      return;
+    }
 
-      // Cập nhật trạng thái trong local state sau khi cập nhật thành công
-      setOrders((prevOrders) =>
-        prevOrders.map((order) =>
-          order.id === id
-            ? { ...order, status: newStatus } // Chỉ thay đổi trạng thái, không thay đổi các thông tin khác
-            : order
-        )
+    if (selectedStatus === "cancelled" || selectedStatus === "shipped") {
+      const confirmChange = window.confirm(
+        "⚠️ Bạn có chắc chắn muốn thay đổi trạng thái sang 'Đã hủy' hoặc 'Đã giao hàng'?"
       );
-    } catch (err) {
-      setError("Lỗi khi cập nhật trạng thái.");
+      if (!confirmChange) return;
+    }
+
+    try {
+      const updatedOrder = { ...order, status: selectedStatus };
+      await axios.put(`http://localhost:3000/orders/${id}`, updatedOrder);
+      setOrders((prev) =>
+        prev.map((o) => (o.id === id ? { ...o, status: selectedStatus } : o))
+      );
+      alert("✅ Cập nhật trạng thái thành công!");
+    } catch {
+      alert("❌ Lỗi khi cập nhật trạng thái.");
     }
   };
 
@@ -77,7 +87,7 @@ const ListOrder = () => {
 
   return (
     <div>
-      <h3 className="text-center mt-10 mb-4">Quản Lý Đơn Hàng</h3>
+      <h3 className="text-center mt-4 mb-4">Quản Lý Đơn Hàng</h3>
       <div className="container mt-5">
         <div className="table-responsive">
           <table className="table table-striped">
@@ -89,52 +99,47 @@ const ListOrder = () => {
                 <th>Khách Hàng</th>
                 <th>Trạng Thái</th>
                 <th>Phương Thức Thanh Toán</th>
-                <th>Chỉnh Sửa</th>
+                <th>Hành Động</th>
               </tr>
             </thead>
             <tbody>
-              {orders.map((order, index) => (
-                <tr key={order.id}>
-                  <td>{index + 1}</td>
-                  <td>{order.orderCode}</td>
-                  <td>{new Date(order.orderDate).toLocaleDateString()}</td>
-                  <td>{order.user ? order.user.name : 'Không có tên'}</td> {/* Kiểm tra xem user có tồn tại không */}
-                  <td>
-                  <select
-                      className="form-select form-select-sm"
-                      value={order.status}
-                      onChange={(e) => {
-                        // Không cho phép thay đổi trạng thái nếu là "Đã hủy"
-                        if (order.status === 'Đã hủy' && 'Đã giao') {
-                          return;
+              {orders.map((order, index) => {
+                const isDisabled = order.status === "cancelled" || order.status === "shipped";
+                return (
+                  <tr key={order.id}>
+                    <td>{index + 1}</td>
+                    <td>{order.orderCode}</td>
+                    <td>{new Date(order.orderDate).toLocaleDateString()}</td>
+                    <td>{order.user?.name ?? "Không có tên"}</td>
+                    <td>
+                      <select
+                        className="form-select form-select-sm"
+                        value={selectedStatuses[order.id] || order.status}
+                        onChange={(e) =>
+                          handleSelectChange(order.id, e.target.value)
                         }
-                        setOrders((prevOrders) =>
-                          prevOrders.map((item) =>
-                            item.id === order.id
-                              ? { ...item, status: e.target.value }
-                              : item
-                          )
-                        );
-                      }}
-                      disabled={order.status === 'Đã hủy'|| order.status === 'Đã giao'} // Vô hiệu hóa dropdown khi trạng thái là "Đã hủy"
-                    >
-                      <option value="Đang xử lý">Đang xử lý</option>
-                      <option value="Đang vận chuyển">Đang vận chuyển</option>
-                      <option value="Đã giao">Đã giao</option>
-                      <option value="Đã hủy">Đã hủy</option>
-                    </select>
-                  </td>
-                  <td>{order.paymentMethod}</td>
-                  <td>
-                    <button
-                      className="btn btn-success"
-                      onClick={() => handleStatusChange(order.id, order.status)}
-                    >
-                      Thay đổi
-                    </button>
-                  </td>
-                </tr>
-              ))}
+                        disabled={isDisabled}
+                      >
+                        {OrderStatuses.map((status) => (
+                          <option key={status.code} value={status.code}>
+                            {status.label}
+                          </option>
+                        ))}
+                      </select>
+                    </td>
+                    <td>{order.paymentMethod}</td>
+                    <td>
+                      <button
+                        className="btn btn-success btn-sm"
+                        onClick={() => handleStatusChange(order.id)}
+                        disabled={isDisabled}
+                      >
+                        Thay đổi
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Iproduct } from '../../interface/product';
 import axios from 'axios';
+import "../mainbuuton.css"
 import { Link } from 'react-router-dom';
 
 const MainButton = () => {
@@ -34,7 +35,7 @@ const MainButton = () => {
  /></Link>
  <div className="product-info">
    <h5 className="product-name">{item.name}</h5>
-   <p className="product-price">{item.price} VND</p>
+   <p className="product-price">Price : {item.price} VND</p>
  </div>
 </div>
     ))}

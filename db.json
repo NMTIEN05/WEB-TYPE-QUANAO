@@ -75,7 +75,22 @@
       "name": "Khanh Phong",
       "sdt": "037222444",
       "id": 10,
-      "address": "Số Nhà 1"
+      "address": "Nam Tu Liem"
+    },
+    {
+      "email": "tienaaaaaa@gmail.com",
+      "password": "tienaaaaaa@gmail.com",
+      "name": "tienaaaaaa@gmail.com",
+      "sdt": "0372229304",
+      "id": 11
+    },
+    {
+      "email": "fru03126@jioso.com",
+      "password": "fru03126@jioso.com",
+      "name": "Nguyễn Mạnh Tiến",
+      "sdt": "0888888888",
+      "id": 12,
+      "address": "123456"
     }
   ],
   "categorys": [
@@ -166,24 +181,14 @@
   ],
   "carts": [
     {
-      "name": "Quần DSQUARED2 Vảy Sơn likeaut",
-      "price": "55555",
-      "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltdw003ckexl9b",
-      "categorys": "DSQ",
-      "describe": "Đặc điểm nổi bật\nKiểu dáng túi phom chữ nhật thời trang\nGồm 1 ngăn chính rộng rãi và 1 ngăn zip nhỏ ở phía trước\nChất da mềm mại, sang trọng\nMàu sắc hiện đại dễ dàng phối với nhiều trang phục và phụ kiện khác",
-      "id": 2,
+      "name": "Áo thun nam trơn cao cấp KENB",
+      "price": "101000",
+      "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcmnd9d247t7d.webp",
+      "categorys": "Aó  Phông",
+      "describe": "ÁO THUN NAM TRƠN KENB CHẤT LIỆU COTTON 100% CO GIÃN 4 CHIỀU THOÁNG MÁT CỰC ĐẸP VÀ SANG TRỌNG\nKENB CLOSET - Thương hiệu Việt Nam - đem đến cho bạn những trải nghiệm từ phong cách ăn mặc đơn giản, hiện đại và sang trọng nhất.",
+      "id": 5,
       "sl": 1,
-      "email": "phamthid@example.com"
-    },
-    {
-      "name": "Áo phông nam Local Brand BEEYANBUY ",
-      "price": "88800",
-      "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
-      "categorys": "DSQ",
-      "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
-      "id": 9,
-      "sl": 1,
-      "email": "tienbao200501@gmail.com"
+      "email": "ohw72649@bcooq.com"
     },
     {
       "name": "Áo thun tay ngắn nam trắng local brand BEEYANBUY",
@@ -193,17 +198,17 @@
       "describe": "\n\nThông tin sản phẩm Áo thun unisex BEEYANBUY tay lỡ \n\n- Chất liệu: Cotton 100%, vải mềm, vải mịn, thoáng mát, không xù lông.\n\n- Đường may chuẩn chỉnh, tỉ mỉ, chắc chắn.\n\n- Mặc ở nhà, mặc đi chơi hoặc khi vận động thể thao. Phù hợp để phối với nhiều loại trang phục.\n\n- Thiết kế hiện đại, trẻ trung, năng động. Dễ phối đồ.",
       "id": 7,
       "sl": 1,
-      "email": "tienbao200501@gmail.com"
+      "email": "fru03126@jioso.com"
     },
     {
-      "name": "Áo Thun Thêu Ngựa Cao Cấp",
-      "price": "58000",
-      "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lyow3c5zegct9c.webp",
-      "categorys": "Aó  Phông",
-      "describe": "Bộ quần áo nam nữ thêu ngựa cổ tròn tay ngắn là sự lựa chọn hàng đầu của giới trẻ.. \nĐây là một mẫu áo phông thời trang nam nữ và sét bộ vừa dễ phối đồ vừa tạo sự thoải mái cho người mặc. \nTuy sản phẩm có thiết kế tương đối đơn giản nhưng vẫn không hề làm mất đi vẻ trẻ trung năng động và lịch sự của sản phẩm.",
-      "id": 4,
-      "sl": 1,
-      "email": "tienbao200501@gmail.com"
+      "name": "Áo phông nam Local Brand BEEYANBUY ",
+      "price": "88800",
+      "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+      "categorys": "DSQ",
+      "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+      "id": 9,
+      "sl": 2,
+      "email": "tiennmph50685@gmail.com"
     }
   ],
   "comments": [
@@ -224,35 +229,6 @@
     }
   ],
   "orders": [
-    {
-      "orderCode": "ORD-lmez31vtd",
-      "orderDate": "2025-03-27T13:49:00.040Z",
-      "user": {
-        "email": "ohw72649@bcooq.com",
-        "password": "ohw72649@bcooq.com",
-        "name": "Khanh Phong",
-        "sdt": "037222444",
-        "id": 10,
-        "address": "Số Nhà 1"
-      },
-      "cartItems": [
-        {
-          "name": "Quần DSQUARED2 Vảy Sơn",
-          "price": "200000",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lsuwucp5j3bt2b",
-          "categorys": "Aó  Phông",
-          "describe": "Dsquared2 là một phụ kiện hoàn hảo cho những ai yêu thích sự tiện lợi và thời trang. Được chế tác từ chất liệu polyamide cao cấp vừa bền bỉ vừa nhẹ nhàng, chiếc túi có ngăn chính rộng rãi để chứa những vật dụng cần thiết hàng ngày như điện thoại, ví tiền hay chìa khóa. Ngoài ra, ngăn nhỏ phía trước có khóa kéo còn giúp bạn dễ dàng sắp xếp các vật dụng nhỏ một cách ngăn nắp, phù hợp cho cả những buổi dạo phố hay các hoạt động ngoài trời.",
-          "id": 1,
-          "sl": 1
-        }
-      ],
-      "paymentMethod": "cod",
-      "shippingFee": 30000,
-      "totalAmount": 200000,
-      "grandTotal": 230000,
-      "id": 1,
-      "status": "Đã hủy"
-    },
     {
       "orderCode": "ORD-h2kwttxjj",
       "orderDate": "2025-03-27T13:57:14.914Z",
@@ -280,37 +256,7 @@
       "totalAmount": 532800,
       "grandTotal": 562800,
       "id": 2,
-      "status": "Đã giao"
-    },
-    {
-      "orderCode": "ORD-6cvjb96js",
-      "orderDate": "2025-03-29T00:38:59.972Z",
-      "user": {
-        "name": "Nguyễn Mạnh Tiến",
-        "sdt": "0372229304",
-        "email": "tiennmph50685@gmail.com",
-        "password": "tien2005",
-        "role": "admin",
-        "address": "ABC",
-        "id": 1
-      },
-      "cartItems": [
-        {
-          "name": "Áo phông nam Local Brand BEEYANBUY ",
-          "price": "88800",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
-          "categorys": "DSQ",
-          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
-          "id": 9,
-          "sl": 2
-        }
-      ],
-      "paymentMethod": "vnpay",
-      "shippingFee": 30000,
-      "totalAmount": 177600,
-      "grandTotal": 207600,
-      "id": 3,
-      "status": "Đã giao"
+      "status": "Đã hủy"
     },
     {
       "orderCode": "ORD-mfqk0vwzz",
@@ -339,7 +285,7 @@
       "totalAmount": 232000,
       "grandTotal": 262000,
       "id": 4,
-      "status": "Đã giao"
+      "status": "Đã hủy"
     },
     {
       "orderCode": "ORD-j6rxjx6x1",
@@ -398,7 +344,408 @@
       "shippingFee": 30000,
       "totalAmount": 942355,
       "grandTotal": 972355,
-      "id": 5
+      "id": 5,
+      "status": "Đã hủy"
+    },
+    {
+      "orderCode": "ORD-gkgsnuwxl",
+      "orderDate": "2025-04-07T17:07:51.310Z",
+      "user": {
+        "name": "Nguyễn Mạnh Tiến",
+        "sdt": "0372229304",
+        "email": "tiennmph50685@gmail.com",
+        "password": "tien2005",
+        "role": "admin",
+        "address": "ABC",
+        "id": 1
+      },
+      "cartItems": [
+        {
+          "name": "Áo phông nam Local Brand BEEYANBUY ",
+          "price": "88800",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+          "categorys": "DSQ",
+          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 9,
+          "sl": 2,
+          "email": "tiennmph50685@gmail.com"
+        }
+      ],
+      "paymentMethod": "credit_card",
+      "shippingFee": 30000,
+      "totalAmount": 177600,
+      "grandTotal": 207600,
+      "id": 6,
+      "status": "cancelled"
+    },
+    {
+      "orderCode": "ORD-hgnvuwn9x",
+      "orderDate": "2025-04-14T10:11:58.627Z",
+      "user": {
+        "email": "ohw72649@bcooq.com",
+        "password": "ohw72649@bcooq.com",
+        "name": "Khanh Phong",
+        "sdt": "037222444",
+        "id": 10,
+        "address": "Nam Tu Liem"
+      },
+      "cartItems": [
+        {
+          "name": "Quần DSQUARED2 Vảy Sơn likeaut",
+          "price": "55555",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltdw003ckexl9b",
+          "categorys": "DSQ",
+          "describe": "Đặc điểm nổi bật\nKiểu dáng túi phom chữ nhật thời trang\nGồm 1 ngăn chính rộng rãi và 1 ngăn zip nhỏ ở phía trước\nChất da mềm mại, sang trọng\nMàu sắc hiện đại dễ dàng phối với nhiều trang phục và phụ kiện khác",
+          "id": 2,
+          "sl": 1,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo phông nam Local Brand BEEYANBUY ",
+          "price": "88800",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+          "categorys": "DSQ",
+          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 9,
+          "sl": 1,
+          "email": "ohw72649@bcooq.com"
+        }
+      ],
+      "paymentMethod": "credit_card",
+      "shippingFee": 30000,
+      "totalAmount": 144355,
+      "grandTotal": 174355,
+      "id": 8,
+      "status": "cancelled"
+    },
+    {
+      "orderCode": "ORD-zchxd99i4",
+      "orderDate": "2025-04-14T10:12:47.065Z",
+      "user": {
+        "email": "ohw72649@bcooq.com",
+        "password": "ohw72649@bcooq.com",
+        "name": "Khanh Phong",
+        "sdt": "037222444",
+        "id": 10,
+        "address": "Nam Tu Liem"
+      },
+      "cartItems": [
+        {
+          "name": "Quần DSQUARED2 Vảy Sơn likeaut",
+          "price": "55555",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltdw003ckexl9b",
+          "categorys": "DSQ",
+          "describe": "Đặc điểm nổi bật\nKiểu dáng túi phom chữ nhật thời trang\nGồm 1 ngăn chính rộng rãi và 1 ngăn zip nhỏ ở phía trước\nChất da mềm mại, sang trọng\nMàu sắc hiện đại dễ dàng phối với nhiều trang phục và phụ kiện khác",
+          "id": 2,
+          "sl": 1,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo phông nam Local Brand BEEYANBUY ",
+          "price": "88800",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+          "categorys": "DSQ",
+          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 9,
+          "sl": 2,
+          "email": "ohw72649@bcooq.com"
+        }
+      ],
+      "paymentMethod": "credit_card",
+      "shippingFee": 30000,
+      "totalAmount": 233155,
+      "grandTotal": 263155,
+      "id": 9,
+      "status": "cancelled"
+    },
+    {
+      "orderCode": "ORD-bzks68cbe",
+      "orderDate": "2025-04-14T11:15:20.840Z",
+      "user": {
+        "email": "ohw72649@bcooq.com",
+        "password": "ohw72649@bcooq.com",
+        "name": "Khanh Phong",
+        "sdt": "037222444",
+        "id": 10,
+        "address": "Nam Tu Liem"
+      },
+      "cartItems": [
+        {
+          "name": "Quần DSQUARED2 Vảy Sơn likeaut",
+          "price": "55555",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltdw003ckexl9b",
+          "categorys": "DSQ",
+          "describe": "Đặc điểm nổi bật\nKiểu dáng túi phom chữ nhật thời trang\nGồm 1 ngăn chính rộng rãi và 1 ngăn zip nhỏ ở phía trước\nChất da mềm mại, sang trọng\nMàu sắc hiện đại dễ dàng phối với nhiều trang phục và phụ kiện khác",
+          "id": 2,
+          "sl": 2,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo phông nam Local Brand BEEYANBUY ",
+          "price": "88800",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+          "categorys": "DSQ",
+          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 9,
+          "sl": 3,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo thun nam trơn cao cấp KENB",
+          "price": "101000",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcmnd9d247t7d.webp",
+          "categorys": "Aó  Phông",
+          "describe": "ÁO THUN NAM TRƠN KENB CHẤT LIỆU COTTON 100% CO GIÃN 4 CHIỀU THOÁNG MÁT CỰC ĐẸP VÀ SANG TRỌNG\nKENB CLOSET - Thương hiệu Việt Nam - đem đến cho bạn những trải nghiệm từ phong cách ăn mặc đơn giản, hiện đại và sang trọng nhất.",
+          "id": 5,
+          "sl": 1,
+          "email": "ohw72649@bcooq.com"
+        }
+      ],
+      "paymentMethod": "credit_card",
+      "shippingFee": 30000,
+      "totalAmount": 478510,
+      "grandTotal": 508510,
+      "id": 10,
+      "status": "Đã hủy"
+    },
+    {
+      "orderCode": "ORD-rk9tdo1la",
+      "orderDate": "2025-04-14T11:29:33.688Z",
+      "user": {
+        "email": "ohw72649@bcooq.com",
+        "password": "ohw72649@bcooq.com",
+        "name": "Khanh Phong",
+        "sdt": "037222444",
+        "id": 10,
+        "address": "Nam Tu Liem"
+      },
+      "cartItems": [
+        {
+          "name": "Quần DSQUARED2 Vảy Sơn likeaut",
+          "price": "55555",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltdw003ckexl9b",
+          "categorys": "DSQ",
+          "describe": "Đặc điểm nổi bật\nKiểu dáng túi phom chữ nhật thời trang\nGồm 1 ngăn chính rộng rãi và 1 ngăn zip nhỏ ở phía trước\nChất da mềm mại, sang trọng\nMàu sắc hiện đại dễ dàng phối với nhiều trang phục và phụ kiện khác",
+          "id": 2,
+          "sl": 2,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo phông nam Local Brand BEEYANBUY ",
+          "price": "88800",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+          "categorys": "DSQ",
+          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 9,
+          "sl": 3,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo thun nam trơn cao cấp KENB",
+          "price": "101000",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcmnd9d247t7d.webp",
+          "categorys": "Aó  Phông",
+          "describe": "ÁO THUN NAM TRƠN KENB CHẤT LIỆU COTTON 100% CO GIÃN 4 CHIỀU THOÁNG MÁT CỰC ĐẸP VÀ SANG TRỌNG\nKENB CLOSET - Thương hiệu Việt Nam - đem đến cho bạn những trải nghiệm từ phong cách ăn mặc đơn giản, hiện đại và sang trọng nhất.",
+          "id": 5,
+          "sl": 1,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo thun tay ngắn nam trắng local brand BEEYANBUY",
+          "price": "740000",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf0yl77fd762ae.webp",
+          "categorys": "Quần Dài",
+          "describe": "\n\nThông tin sản phẩm Áo thun unisex BEEYANBUY tay lỡ \n\n- Chất liệu: Cotton 100%, vải mềm, vải mịn, thoáng mát, không xù lông.\n\n- Đường may chuẩn chỉnh, tỉ mỉ, chắc chắn.\n\n- Mặc ở nhà, mặc đi chơi hoặc khi vận động thể thao. Phù hợp để phối với nhiều loại trang phục.\n\n- Thiết kế hiện đại, trẻ trung, năng động. Dễ phối đồ.",
+          "id": 7,
+          "sl": 1,
+          "email": "ohw72649@bcooq.com"
+        }
+      ],
+      "paymentMethod": "vnpay",
+      "shippingFee": 30000,
+      "totalAmount": 1218510,
+      "grandTotal": 1248510,
+      "id": 11,
+      "status": "cancelled"
+    },
+    {
+      "orderCode": "ORD-q14tvkk05",
+      "orderDate": "2025-04-14T11:30:37.557Z",
+      "user": {
+        "email": "ohw72649@bcooq.com",
+        "password": "ohw72649@bcooq.com",
+        "name": "Khanh Phong",
+        "sdt": "037222444",
+        "id": 10,
+        "address": "Nam Tu Liem"
+      },
+      "cartItems": [
+        {
+          "name": "Quần DSQUARED2 Vảy Sơn likeaut",
+          "price": "55555",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltdw003ckexl9b",
+          "categorys": "DSQ",
+          "describe": "Đặc điểm nổi bật\nKiểu dáng túi phom chữ nhật thời trang\nGồm 1 ngăn chính rộng rãi và 1 ngăn zip nhỏ ở phía trước\nChất da mềm mại, sang trọng\nMàu sắc hiện đại dễ dàng phối với nhiều trang phục và phụ kiện khác",
+          "id": 2,
+          "sl": 2,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo phông nam Local Brand BEEYANBUY ",
+          "price": "88800",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+          "categorys": "DSQ",
+          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 9,
+          "sl": 4,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo thun nam trơn cao cấp KENB",
+          "price": "101000",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcmnd9d247t7d.webp",
+          "categorys": "Aó  Phông",
+          "describe": "ÁO THUN NAM TRƠN KENB CHẤT LIỆU COTTON 100% CO GIÃN 4 CHIỀU THOÁNG MÁT CỰC ĐẸP VÀ SANG TRỌNG\nKENB CLOSET - Thương hiệu Việt Nam - đem đến cho bạn những trải nghiệm từ phong cách ăn mặc đơn giản, hiện đại và sang trọng nhất.",
+          "id": 5,
+          "sl": 1,
+          "email": "ohw72649@bcooq.com"
+        },
+        {
+          "name": "Áo thun tay ngắn nam trắng local brand BEEYANBUY",
+          "price": "740000",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf0yl77fd762ae.webp",
+          "categorys": "Quần Dài",
+          "describe": "\n\nThông tin sản phẩm Áo thun unisex BEEYANBUY tay lỡ \n\n- Chất liệu: Cotton 100%, vải mềm, vải mịn, thoáng mát, không xù lông.\n\n- Đường may chuẩn chỉnh, tỉ mỉ, chắc chắn.\n\n- Mặc ở nhà, mặc đi chơi hoặc khi vận động thể thao. Phù hợp để phối với nhiều loại trang phục.\n\n- Thiết kế hiện đại, trẻ trung, năng động. Dễ phối đồ.",
+          "id": 7,
+          "sl": 1,
+          "email": "ohw72649@bcooq.com"
+        }
+      ],
+      "paymentMethod": "credit_card",
+      "shippingFee": 30000,
+      "totalAmount": 1307310,
+      "grandTotal": 1337310,
+      "id": 12,
+      "status": "Đang xử lý"
+    },
+    {
+      "orderCode": "ORD-otonv9i8c",
+      "orderDate": "2025-04-14T11:38:20.560Z",
+      "user": {
+        "email": "fru03126@jioso.com",
+        "password": "fru03126@jioso.com",
+        "name": "Nguyễn Mạnh Tiến",
+        "sdt": "0888888888",
+        "id": 12,
+        "address": "123456"
+      },
+      "cartItems": [
+        {
+          "name": "Áo phông nam Local Brand BEEYANBUY ",
+          "price": "88800",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+          "categorys": "DSQ",
+          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 9,
+          "sl": 1,
+          "email": "fru03126@jioso.com"
+        }
+      ],
+      "paymentMethod": "credit_card",
+      "shippingFee": 30000,
+      "totalAmount": 88800,
+      "grandTotal": 118800,
+      "id": 13,
+      "status": "cancelled"
+    },
+    {
+      "orderCode": "ORD-6g0dn9ofb",
+      "orderDate": "2025-04-14T11:43:35.243Z",
+      "user": {
+        "email": "fru03126@jioso.com",
+        "password": "fru03126@jioso.com",
+        "name": "Nguyễn Mạnh Tiến",
+        "sdt": "0888888888",
+        "id": 12,
+        "address": "123456"
+      },
+      "cartItems": [
+        {
+          "name": "Quần DSQUARED2 Vảy Sơn likeaut",
+          "price": "55555",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltdw003ckexl9b",
+          "categorys": "DSQ",
+          "describe": "Đặc điểm nổi bật\nKiểu dáng túi phom chữ nhật thời trang\nGồm 1 ngăn chính rộng rãi và 1 ngăn zip nhỏ ở phía trước\nChất da mềm mại, sang trọng\nMàu sắc hiện đại dễ dàng phối với nhiều trang phục và phụ kiện khác",
+          "id": 2,
+          "sl": 3,
+          "email": "fru03126@jioso.com"
+        },
+        {
+          "name": "Áo phông nam Local Brand BEEYANBUY ",
+          "price": "88800",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ll92l24638h8dc_tn",
+          "categorys": "DSQ",
+          "describe": " \n\n Thông tin sản phẩm Áo thun unisex BEEYANBUY\n\n - - Chất liệu: 100 - Chất liệu: 100% Cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n - - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n - Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp phối với nhiều loại trang phục.\n\n - - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 9,
+          "sl": 1,
+          "email": "fru03126@jioso.com"
+        },
+        {
+          "name": "HIP vintage Xám đậm áo thun nam",
+          "price": "205000",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxwer1qrdfbv81.webp",
+          "categorys": "Aó  Phông",
+          "describe": "﻿\n◾ chất vải mềm mịn dày nhưng cực kì mát và không xù\n﻿\n◾ Hoàn tiền nếu sản phẩm không giống với mô tả\n﻿\n◾ Nam và Nữ đều mặc được, form áo rộng chuẩn TAY LỠ UNISEX cực đẹp",
+          "id": 6,
+          "sl": 1,
+          "email": "fru03126@jioso.com"
+        },
+        {
+          "name": "Áo phông nam wash BEEYANBUY",
+          "price": "90000",
+          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-lqptvpn85ic864.webp",
+          "categorys": "Quần Dài",
+          "describe": "Thông tin sản phẩm Áo nỉ unisex BEEYANBUY nam nữ áo nỉ dáng rộng\n\n- - Chất liệu: 100 - Chất liệu: 100% cotton, vải mềm, chất vải mịn, thoáng mát, không xù.\n\n- - Đường may chuẩn, tỉ mỉ, chắc chắn.\n\n- Mặc ở nhà, đi chơi hoặc khi tập thể thao. Thích hợp để trộn quần áo với nhiều loại.\n\n- - Kiểu dáng hiện đại, trẻ trung, năng động. Dễ dàng để kết hợp.",
+          "id": 8,
+          "sl": 1,
+          "email": "fru03126@jioso.com"
+        }
+      ],
+      "paymentMethod": "credit_card",
+      "shippingFee": 30000,
+      "totalAmount": 550465,
+      "grandTotal": 580465,
+      "id": 14,
+      "status": "cancelled"
+    },
+    {
+      "orderCode": "ORD-5ou1jpwp6",
+      "orderDate": "2025-04-14T11:53:04.765Z",
+      "user": {
+        "email": "fru03126@jioso.com",
+        "password": "fru03126@jioso.com",
+        "name": "Nguyễn Mạnh Tiến",
+        "sdt": "0888888888",
+        "id": 12,
+        "address": "123456"
+      },
+      "cartItems": [
+        {
+          "name": "Áo thun tay ngắn nam trắng local brand BEEYANBUY",
+          "price": "740000",
+          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf0yl77fd762ae.webp",
+          "categorys": "Quần Dài",
+          "describe": "\n\nThông tin sản phẩm Áo thun unisex BEEYANBUY tay lỡ \n\n- Chất liệu: Cotton 100%, vải mềm, vải mịn, thoáng mát, không xù lông.\n\n- Đường may chuẩn chỉnh, tỉ mỉ, chắc chắn.\n\n- Mặc ở nhà, mặc đi chơi hoặc khi vận động thể thao. Phù hợp để phối với nhiều loại trang phục.\n\n- Thiết kế hiện đại, trẻ trung, năng động. Dễ phối đồ.",
+          "id": 7,
+          "sl": 1,
+          "email": "fru03126@jioso.com"
+        }
+      ],
+      "paymentMethod": "credit_card",
+      "shippingFee": 30000,
+      "totalAmount": 740000,
+      "grandTotal": 770000,
+      "id": 15
     }
   ]
 }

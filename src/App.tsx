@@ -25,6 +25,7 @@ import OrderDetails from './competdents/layout/clinet/pay';
 import OrdersList from './competdents/layout/clinet/Order';
 import EditOrderPage from './competdents/order/Editoder';
 import Listorder from './competdents/order/Listorder';
+import Listcart from './competdents/layout/clinet/listcart';
 // import Account from './competdents/layout/clinet/User/accout';
 
 function App() {
@@ -56,7 +57,9 @@ const router = useRoutes([
     {path:"/category/:id",element:<ProductByCategory />},
     {path:"/category/product/:id",element:<ProductDetail />},
     {path:"/accout",element:<Account />},
-    {path:"/order",element:<OrdersList />},
+    {path:"/order/:id",element:<OrdersList />},
+    {path:"/list-orders",element:<Listcart />},
+
 
     {path:"/edit-account",element:<EditAccount />},
 

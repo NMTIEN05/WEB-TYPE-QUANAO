@@ -1,0 +1,87 @@
+.container {
+    padding: 20px;
+  }
+  
+  .product-full {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 20px;
+  }
+  
+  .product {
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Soft gradient background */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Soft, elevated shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease; /* Smooth animation */
+    overflow: hidden; /* Prevent content overflow */
+  }
+  
+  .product:hover {
+    transform: translateY(-12px); /* Slightly more lift */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Subtle color change on hover */
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease, opacity 0.3s ease; /* Smooth zoom and fade in */
+  }
+  
+  .product:hover .product-image {
+    transform: scale(1.1); /* Larger zoom effect */
+    opacity: 0.9; /* Slight fade effect */
+  }
+  
+  .product-info {
+    margin-top: 20px;
+  }
+  
+  .product-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50; /* Elegant dark color */
+    line-height: 1.4;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .product-name:hover {
+    color: #2980b9; /* Soft blue on hover */
+    transform: translateY(-3px); /* Slight movement to indicate interactivity */
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #e74c3c; /* Bold red for price */
+    margin-top: 12px;
+    letter-spacing: 1px; /* Adds spacing to the characters */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .product-price:hover {
+    color: #c0392b; /* Darker red on hover */
+    transform: translateY(-3px); /* Slight movement for added effect */
+  }
+  
+  #loadMore {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #3498db, #2980b9); /* Gradient for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #loadMore:hover {
+    background: linear-gradient(145deg, #2980b9, #3498db); /* Reversed gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  

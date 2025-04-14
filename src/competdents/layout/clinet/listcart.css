@@ -1,0 +1,68 @@
+/* pay.css */
+
+.container5 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+  }
+  
+  .table {
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  .table thead th {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+    font-weight: bold;
+  }
+  
+  .text-warning {
+    color: #ffc107;
+    font-weight: bold;
+  }
+  
+  .form-select {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  .btn-secondary {
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
